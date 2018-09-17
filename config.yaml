@@ -2,3 +2,4 @@ YKTBH: "21xxxyyyy"
 PASSWORD: "your_password"
 MACAUTH: true
 CONNECTIONTEST_WEBSITE: "http://www.baidu.com"
+CONNECTIONTEST_INTERVAL: 90
