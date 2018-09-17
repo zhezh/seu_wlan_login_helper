@@ -2,6 +2,7 @@
 
 ### 依赖环境:
 - Python 3
+- [yaml](https://pypi.org/project/PyYAML/) : `pip install pyyaml`
 
 
 ### 特性:
