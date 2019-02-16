@@ -37,7 +37,7 @@ class SeuHelper:
             'enablemacauth': '1' if self.enable_mac_auth else '0'
         }
         try:
-            requests.post(url,headers=headers,data=payload)
+            requests.post(url, headers=headers, data=payload, verify=False)
             print(self.getCurrentTime(),'连上了.')
         except:
             print("error")
@@ -60,14 +60,14 @@ class SeuHelper:
         }
         payload = {}
         try:
-            requests.post(url,headers=headers,data=payload)
+            requests.post(url, headers=headers, data=payload, verify=False)
             print(self.getCurrentTime(),'logged out.')
         except:
             print("error")
 
     def canConnect(self):
         try:
-            q=requests.get(self.connection_web,timeout=5)
+            q=requests.get(self.connection_web, timeout=5, verify=False)
             m=re.search(r'STATUS OK',q.text)
             if m:
                 return True
